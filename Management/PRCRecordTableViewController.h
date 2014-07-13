@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PRCRecondTableViewController : UITableViewController
+@interface PRCRecordTableViewController : UITableViewController
 
 @end

@@ -7,6 +7,11 @@
 //
 
 #import "PRCDeviceTableViewController.h"
+#import "PRCDeviceDetailViewController.h"
+#import "PRCDeviceAddViewController.h"
+#import "PRCDeviceTableViewCell.h"
+#import "PRCDeviceModel.h"
+#import "PRCDataModel.h"
 
 @interface PRCDeviceTableViewController ()
 
@@ -27,45 +32,67 @@
 {
     [super viewDidLoad];
     
+    
+    [self configureNavigationBar];
+    
+    
     // Uncomment the following line to preserve selection between presentations.
     // self.clearsSelectionOnViewWillAppear = NO;
     
     // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
     // self.navigationItem.rightBarButtonItem = self.editButtonItem;
 }
-
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+#pragma mark - UI Methods;
+- (void)configureNavigationBar {
+    self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc]initWithBarButtonSystemItem:UIBarButtonSystemItemAdd target:self action:@selector(didClickAddButton)];
+    
+}
+#pragma mark - Actions
+- (void)didClickAddButton {
+    PRCDeviceAddViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"DeviceAddViewController"];
+    
+    [self.navigationController pushViewController:vc animated:YES];
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
+    
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [[[PRCDataModel shardedDataModel] deviceArray] count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    PRCDeviceTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"DeviceCell" forIndexPath:indexPath];
     
+    cell.deviceModel = [[PRCDataModel shardedDataModel] getDeviceAtIndex:indexPath.row];
+    cell.deviceNameLable.text = cell.deviceModel.deviceName;
+    
+    if (cell.deviceModel.isBorrowed) {
+        cell.deviceStatusLable.text = @"Borrowed";
+    } else {
+        cell.deviceStatusLable.text = @"Being held";
+    }
     // Configure the cell...
     
     return cell;
 }
-*/
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
+}
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -105,7 +132,7 @@
 }
 */
 
-/*
+
 #pragma mark - Navigation
 
 // In a storyboard-based application, you will often want to do a little preparation before navigation
@@ -113,7 +140,10 @@
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    PRCDeviceDetailViewController *deviceDetailViewController = segue.destinationViewController;
+    
+    deviceDetailViewController.deviceModel = ((PRCDeviceTableViewCell *)sender).deviceModel;
 }
-*/
+
 
 @end

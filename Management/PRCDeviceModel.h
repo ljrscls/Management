@@ -8,6 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
-@interface PRCDeviceModel : NSObject
+@interface PRCDeviceModel : NSObject <NSCoding, NSCopying>
+
+@property (nonatomic, copy) NSString *deviceName;
+@property (nonatomic, copy) NSString *deviceType;
+@property (nonatomic) NSUInteger index;
+@property (nonatomic) BOOL isBorrowed;
+- (id)initWithDeviceName:(NSString *)deviceName DeviceType:(NSString *)deviceType;
 
 @end

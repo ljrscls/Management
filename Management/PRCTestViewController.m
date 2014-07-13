@@ -10,6 +10,8 @@
 
 @interface PRCTestViewController ()
 
+@property (nonatomic, strong) NSMutableArray *data;
+
 @end
 
 @implementation PRCTestViewController
@@ -26,6 +28,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    self.data = [[NSMutableArray alloc] initWithObjects:@"aaa",@"bbb", nil];
+    
+    self.view.backgroundColor = [UIColor yellowColor];
+    
+    UITableView *tv = [[UITableView alloc] init];
+    
+    [self.view addSubview:tv];
+    tv.frame = CGRectMake(0, 0, self.view.frame.size.width, self.view.frame.size.height);
+    tv.backgroundColor = [UIColor redColor];
+    
+    tv.dataSource = self;
+    tv.delegate = self;
     // Do any additional setup after loading the view.
 }
 
@@ -35,6 +50,24 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
+    return [self.data count];
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+    UITableViewCell *cell = [[UITableViewCell alloc] init];
+    
+    UILabel *l = [[UILabel alloc] initWithFrame:CGRectMake(10, 10, 100, 30)];
+    
+    l.text = [self.data objectAtIndex:indexPath.row];
+    
+    l.backgroundColor = [UIColor greenColor];
+    
+    [cell addSubview:l];
+    cell.backgroundColor = [UIColor grayColor];
+    
+    return cell;
+}
 /*
 #pragma mark - Navigation
 

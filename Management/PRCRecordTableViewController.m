@@ -6,13 +6,16 @@
 //  Copyright (c) 2014年 exec. All rights reserved.
 //
 
-#import "PRCRecondTableViewController.h"
+#import "PRCRecordTableViewController.h"
+#import "PRCRecordModel.h"
+#import "PRCRecordTableViewCell.h"
+#import "PRCRecordDetailViewController.h"
 
-@interface PRCRecondTableViewController ()
+@interface PRCRecordTableViewController ()
 
 @end
 
-@implementation PRCRecondTableViewController
+@implementation PRCRecordTableViewController
 
 - (id)initWithStyle:(UITableViewStyle)style
 {
@@ -42,78 +45,51 @@
 
 #pragma mark - Table view data source
 
-- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
-{
-#warning Potentially incomplete method implementation.
+- (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
+
     // Return the number of sections.
-    return 0;
+    return 1;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
     // Return the number of rows in the section.
-    return 0;
+    return [[[PRCDataModel shardedDataModel] recordArray] count];
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
+    PRCRecordTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"RecondCell" forIndexPath:indexPath];
     
-    // Configure the cell...
+    cell.recordModel = [[PRCDataModel shardedDataModel] getRecordAtIndex:indexPath.row];
+    cell.deviceNameLable.text = cell.recordModel.deviceName;
+    cell.deviceBorrowTimeLable.text = cell.recordModel.borrowDateString;
+    if (cell.recordModel.isReturn) {
+        cell.deviceStatusLable.text = @"Returned";
+    } else {
+        cell.deviceStatusLable.text = nil;
+    }
+    // Configure the cell...*/
     
     return cell;
 }
-*/
 
-/*
-// Override to support conditional editing of the table view.
-- (BOOL)tableView:(UITableView *)tableView canEditRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the specified item to be editable.
-    return YES;
+
+- (void)viewWillAppear:(BOOL)animated {
+    [super viewWillAppear:animated];
+    
+    [self.tableView reloadData];
 }
-*/
 
-/*
-// Override to support editing the table view.
-- (void)tableView:(UITableView *)tableView commitEditingStyle:(UITableViewCellEditingStyle)editingStyle forRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    if (editingStyle == UITableViewCellEditingStyleDelete) {
-        // Delete the row from the data source
-        [tableView deleteRowsAtIndexPaths:@[indexPath] withRowAnimation:UITableViewRowAnimationFade];
-    } else if (editingStyle == UITableViewCellEditingStyleInsert) {
-        // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-    }   
-}
-*/
-
-/*
-// Override to support rearranging the table view.
-- (void)tableView:(UITableView *)tableView moveRowAtIndexPath:(NSIndexPath *)fromIndexPath toIndexPath:(NSIndexPath *)toIndexPath
-{
-}
-*/
-
-/*
-// Override to support conditional rearranging of the table view.
-- (BOOL)tableView:(UITableView *)tableView canMoveRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // Return NO if you do not want the item to be re-orderable.
-    return YES;
-}
-*/
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
+    PRCRecordDetailViewController *recordDetailViewController = segue.destinationViewController;
+    
+    recordDetailViewController.recordModel = ((PRCRecordTableViewCell *)sender).recordModel;
 }
-*/
+
 
 @end

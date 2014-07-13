@@ -8,6 +8,14 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PRCDeviceDetailViewController : UIViewController
+@interface PRCDeviceDetailViewController : UIViewController <UIAlertViewDelegate>
+@property (weak, nonatomic) IBOutlet UILabel *deviceNameLable;// 名称
+@property (weak, nonatomic) IBOutlet UILabel *deviceTypeLable;// 类型
+@property (weak, nonatomic) IBOutlet UILabel *deviceStatusLable;// 状态
+
+@property (weak, nonatomic) IBOutlet UITextField *nameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *phoneTextField;
+
+@property (nonatomic, weak) PRCDeviceModel *deviceModel;
 
 @end

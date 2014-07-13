@@ -9,5 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @interface PRCDeviceAddViewController : UIViewController
+@property (weak, nonatomic) IBOutlet UITextField *deviceNameTextField;
+@property (weak, nonatomic) IBOutlet UITextField *deviceTypeTextField;
 
 @end

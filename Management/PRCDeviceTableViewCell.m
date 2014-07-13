@@ -30,5 +30,12 @@
 
     // Configure the view for the selected state
 }
+- (id)initWithIndex:(NSInteger)index DeviceName:(NSString *)name DeviceType:(NSString *)type deviceStatus:(BOOL)status{
+    self = [super init];
+    if(self){
+    
+    }
+    return self;
+}
 
 @end

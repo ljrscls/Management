@@ -8,6 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface PRCTestViewController : UIViewController
+@interface PRCTestViewController : UIViewController <UITableViewDataSource , UITableViewDelegate>
 
 @end

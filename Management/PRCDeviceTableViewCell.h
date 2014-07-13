@@ -8,6 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
+@class PRCDeviceModel;
+
 @interface PRCDeviceTableViewCell : UITableViewCell
+
+
+@property (weak, nonatomic) IBOutlet UILabel *deviceStatusLable;
+@property (weak, nonatomic) IBOutlet UILabel *deviceNameLable;
+@property (nonatomic, strong) PRCDeviceModel *deviceModel;
 
 @end

@@ -14,14 +14,23 @@
 		345D33E3196E793300EFAACD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 345D33E2196E793300EFAACD /* main.m */; };
 		345D33E7196E793300EFAACD /* PRCAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 345D33E6196E793300EFAACD /* PRCAppDelegate.m */; };
 		345D33EA196E793300EFAACD /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 345D33E8196E793300EFAACD /* Main.storyboard */; };
-		345D33ED196E793300EFAACD /* PRCFirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345D33EC196E793300EFAACD /* PRCFirstViewController.m */; };
-		345D33F0196E793300EFAACD /* PRCSecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345D33EF196E793300EFAACD /* PRCSecondViewController.m */; };
 		345D33F2196E793300EFAACD /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 345D33F1196E793300EFAACD /* Images.xcassets */; };
 		345D33F9196E793300EFAACD /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345D33F8196E793300EFAACD /* XCTest.framework */; };
 		345D33FA196E793300EFAACD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345D33D6196E793300EFAACD /* Foundation.framework */; };
 		345D33FB196E793300EFAACD /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 345D33DA196E793300EFAACD /* UIKit.framework */; };
 		345D3403196E793300EFAACD /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 345D3401196E793300EFAACD /* InfoPlist.strings */; };
 		345D3405196E793300EFAACD /* ManagementTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 345D3404196E793300EFAACD /* ManagementTests.m */; };
+		345D3426196F761400EFAACD /* PRCDeviceTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345D3425196F761400EFAACD /* PRCDeviceTableViewController.m */; };
+		345D3429196F763600EFAACD /* PRCRecordTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345D3428196F763600EFAACD /* PRCRecordTableViewController.m */; };
+		345D342C196F765500EFAACD /* PRCDeviceDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345D342B196F765500EFAACD /* PRCDeviceDetailViewController.m */; };
+		345D342F196F87AD00EFAACD /* PRCDeviceTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 345D342E196F87AD00EFAACD /* PRCDeviceTableViewCell.m */; };
+		345D34321970CA7800EFAACD /* PRCDeviceAddViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345D34311970CA7800EFAACD /* PRCDeviceAddViewController.m */; };
+		345D34351970D44E00EFAACD /* PRCRecordDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 345D34341970D44E00EFAACD /* PRCRecordDetailViewController.m */; };
+		345D34391970D6D500EFAACD /* PRCDataModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 345D34381970D6D500EFAACD /* PRCDataModel.m */; };
+		345D343C1970DBF500EFAACD /* PRCRecordModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 345D343B1970DBF500EFAACD /* PRCRecordModel.m */; };
+		345D343F1970DC1200EFAACD /* PRCDeviceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 345D343E1970DC1200EFAACD /* PRCDeviceModel.m */; };
+		34A2195519712B8A008AC5F9 /* PRCRecordTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A2195419712B8A008AC5F9 /* PRCRecordTableViewCell.m */; };
+		34A2195819722407008AC5F9 /* PRCTestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 34A2195719722407008AC5F9 /* PRCTestViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -46,16 +55,34 @@
 		345D33E5196E793300EFAACD /* PRCAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRCAppDelegate.h; sourceTree = "<group>"; };
 		345D33E6196E793300EFAACD /* PRCAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRCAppDelegate.m; sourceTree = "<group>"; };
 		345D33E9196E793300EFAACD /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		345D33EB196E793300EFAACD /* PRCFirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRCFirstViewController.h; sourceTree = "<group>"; };
-		345D33EC196E793300EFAACD /* PRCFirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRCFirstViewController.m; sourceTree = "<group>"; };
-		345D33EE196E793300EFAACD /* PRCSecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PRCSecondViewController.h; sourceTree = "<group>"; };
-		345D33EF196E793300EFAACD /* PRCSecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PRCSecondViewController.m; sourceTree = "<group>"; };
 		345D33F1196E793300EFAACD /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		345D33F7196E793300EFAACD /* ManagementTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ManagementTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		345D33F8196E793300EFAACD /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		345D3400196E793300EFAACD /* ManagementTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "ManagementTests-Info.plist"; sourceTree = "<group>"; };
 		345D3402196E793300EFAACD /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		345D3404196E793300EFAACD /* ManagementTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ManagementTests.m; sourceTree = "<group>"; };
+		345D3424196F761400EFAACD /* PRCDeviceTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCDeviceTableViewController.h; sourceTree = "<group>"; };
+		345D3425196F761400EFAACD /* PRCDeviceTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCDeviceTableViewController.m; sourceTree = "<group>"; };
+		345D3427196F763600EFAACD /* PRCRecordTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCRecordTableViewController.h; sourceTree = "<group>"; };
+		345D3428196F763600EFAACD /* PRCRecordTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCRecordTableViewController.m; sourceTree = "<group>"; };
+		345D342A196F765500EFAACD /* PRCDeviceDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCDeviceDetailViewController.h; sourceTree = "<group>"; };
+		345D342B196F765500EFAACD /* PRCDeviceDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCDeviceDetailViewController.m; sourceTree = "<group>"; };
+		345D342D196F87AD00EFAACD /* PRCDeviceTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCDeviceTableViewCell.h; sourceTree = "<group>"; };
+		345D342E196F87AD00EFAACD /* PRCDeviceTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCDeviceTableViewCell.m; sourceTree = "<group>"; };
+		345D34301970CA7800EFAACD /* PRCDeviceAddViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCDeviceAddViewController.h; sourceTree = "<group>"; };
+		345D34311970CA7800EFAACD /* PRCDeviceAddViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCDeviceAddViewController.m; sourceTree = "<group>"; };
+		345D34331970D44E00EFAACD /* PRCRecordDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCRecordDetailViewController.h; sourceTree = "<group>"; };
+		345D34341970D44E00EFAACD /* PRCRecordDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCRecordDetailViewController.m; sourceTree = "<group>"; };
+		345D34371970D6D500EFAACD /* PRCDataModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCDataModel.h; sourceTree = "<group>"; };
+		345D34381970D6D500EFAACD /* PRCDataModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCDataModel.m; sourceTree = "<group>"; };
+		345D343A1970DBF500EFAACD /* PRCRecordModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCRecordModel.h; sourceTree = "<group>"; };
+		345D343B1970DBF500EFAACD /* PRCRecordModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCRecordModel.m; sourceTree = "<group>"; };
+		345D343D1970DC1200EFAACD /* PRCDeviceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCDeviceModel.h; sourceTree = "<group>"; };
+		345D343E1970DC1200EFAACD /* PRCDeviceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCDeviceModel.m; sourceTree = "<group>"; };
+		34A2195319712B8A008AC5F9 /* PRCRecordTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCRecordTableViewCell.h; sourceTree = "<group>"; };
+		34A2195419712B8A008AC5F9 /* PRCRecordTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCRecordTableViewCell.m; sourceTree = "<group>"; };
+		34A2195619722407008AC5F9 /* PRCTestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PRCTestViewController.h; sourceTree = "<group>"; };
+		34A2195719722407008AC5F9 /* PRCTestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PRCTestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,15 +142,16 @@
 		345D33DC196E793300EFAACD /* Management */ = {
 			isa = PBXGroup;
 			children = (
+				345D34361970D6B400EFAACD /* Model */,
+				345D3423196F74E100EFAACD /* ViewController */,
+				345D3422196F74DC00EFAACD /* View */,
 				345D33E5196E793300EFAACD /* PRCAppDelegate.h */,
 				345D33E6196E793300EFAACD /* PRCAppDelegate.m */,
 				345D33E8196E793300EFAACD /* Main.storyboard */,
-				345D33EB196E793300EFAACD /* PRCFirstViewController.h */,
-				345D33EC196E793300EFAACD /* PRCFirstViewController.m */,
-				345D33EE196E793300EFAACD /* PRCSecondViewController.h */,
-				345D33EF196E793300EFAACD /* PRCSecondViewController.m */,
 				345D33F1196E793300EFAACD /* Images.xcassets */,
 				345D33DD196E793300EFAACD /* Supporting Files */,
+				34A2195619722407008AC5F9 /* PRCTestViewController.h */,
+				34A2195719722407008AC5F9 /* PRCTestViewController.m */,
 			);
 			path = Management;
 			sourceTree = "<group>";
@@ -155,6 +183,47 @@
 				345D3401196E793300EFAACD /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		345D3422196F74DC00EFAACD /* View */ = {
+			isa = PBXGroup;
+			children = (
+				345D342D196F87AD00EFAACD /* PRCDeviceTableViewCell.h */,
+				34A2195319712B8A008AC5F9 /* PRCRecordTableViewCell.h */,
+				345D342E196F87AD00EFAACD /* PRCDeviceTableViewCell.m */,
+				34A2195419712B8A008AC5F9 /* PRCRecordTableViewCell.m */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		345D3423196F74E100EFAACD /* ViewController */ = {
+			isa = PBXGroup;
+			children = (
+				345D3424196F761400EFAACD /* PRCDeviceTableViewController.h */,
+				345D3425196F761400EFAACD /* PRCDeviceTableViewController.m */,
+				345D3427196F763600EFAACD /* PRCRecordTableViewController.h */,
+				345D3428196F763600EFAACD /* PRCRecordTableViewController.m */,
+				345D342A196F765500EFAACD /* PRCDeviceDetailViewController.h */,
+				345D342B196F765500EFAACD /* PRCDeviceDetailViewController.m */,
+				345D34301970CA7800EFAACD /* PRCDeviceAddViewController.h */,
+				345D34311970CA7800EFAACD /* PRCDeviceAddViewController.m */,
+				345D34331970D44E00EFAACD /* PRCRecordDetailViewController.h */,
+				345D34341970D44E00EFAACD /* PRCRecordDetailViewController.m */,
+			);
+			name = ViewController;
+			sourceTree = "<group>";
+		};
+		345D34361970D6B400EFAACD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				345D34371970D6D500EFAACD /* PRCDataModel.h */,
+				345D34381970D6D500EFAACD /* PRCDataModel.m */,
+				345D343A1970DBF500EFAACD /* PRCRecordModel.h */,
+				345D343B1970DBF500EFAACD /* PRCRecordModel.m */,
+				345D343D1970DC1200EFAACD /* PRCDeviceModel.h */,
+				345D343E1970DC1200EFAACD /* PRCDeviceModel.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -255,10 +324,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				345D33F0196E793300EFAACD /* PRCSecondViewController.m in Sources */,
+				345D343C1970DBF500EFAACD /* PRCRecordModel.m in Sources */,
+				345D3429196F763600EFAACD /* PRCRecordTableViewController.m in Sources */,
+				345D342F196F87AD00EFAACD /* PRCDeviceTableViewCell.m in Sources */,
 				345D33E7196E793300EFAACD /* PRCAppDelegate.m in Sources */,
-				345D33ED196E793300EFAACD /* PRCFirstViewController.m in Sources */,
+				34A2195819722407008AC5F9 /* PRCTestViewController.m in Sources */,
+				345D342C196F765500EFAACD /* PRCDeviceDetailViewController.m in Sources */,
+				345D34391970D6D500EFAACD /* PRCDataModel.m in Sources */,
+				34A2195519712B8A008AC5F9 /* PRCRecordTableViewCell.m in Sources */,
+				345D34351970D44E00EFAACD /* PRCRecordDetailViewController.m in Sources */,
 				345D33E3196E793300EFAACD /* main.m in Sources */,
+				345D3426196F761400EFAACD /* PRCDeviceTableViewController.m in Sources */,
+				345D34321970CA7800EFAACD /* PRCDeviceAddViewController.m in Sources */,
+				345D343F1970DC1200EFAACD /* PRCDeviceModel.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,6 +541,7 @@
 				345D340A196E793300EFAACD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		345D340B196E793300EFAACD /* Build configuration list for PBXNativeTarget "ManagementTests" */ = {
 			isa = XCConfigurationList;
@@ -471,6 +550,7 @@
 				345D340D196E793300EFAACD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
