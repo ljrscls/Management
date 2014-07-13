@@ -37,9 +37,9 @@
     self.deviceNameLable.text = self.deviceModel.deviceName;
     self.deviceTypeLable.text = self.deviceModel.deviceType;
     if(self.deviceModel.isBorrowed)
-        self.deviceStatusLable.text = @"YES";
+        self.deviceStatusLable.text = @"Borrowed";
     else
-        self.deviceStatusLable.text = @"NO";
+        self.deviceStatusLable.text = @"Being held";
     
 }
 
